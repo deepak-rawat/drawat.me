@@ -1,0 +1,155 @@
+/* ──────────────────────────────────────────────
+   CSS Custom Properties (Dark-Mode Palette)
+   ────────────────────────────────────────────── */
+:root {
+  --bg:          #0d1117;
+  --surface:     #161b22;
+  --border:      #30363d;
+  --text:        #e6edf3;
+  --text-muted:  #8b949e;
+  --accent:      #58a6ff;
+  --accent-hover:#79c0ff;
+  --radius:      8px;
+  --nav-height:  60px;
+  --max-width:   900px;
+}
+
+/* ──────────────────────────────────────────────
+   Reset & Base
+   ────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 90%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* ──────────────────────────────────────────────
+   Button
+   ────────────────────────────────────────────── */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.6rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.25s, transform 0.15s;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  color: var(--bg);
+  transform: translateY(-2px);
+}
+
+
+
+
+/* ──────────────────────────────────────────────
+   Hero / About Me
+   ────────────────────────────────────────────── */
+.hero-content {
+  padding: 4rem 0 3rem;
+  max-width: 600px;
+}
+
+.hero-greeting {
+  font-size: 1.1rem;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.hero-name {
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+}
+
+.hero-bio {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  max-width: 520px;
+  line-height: 1.75;
+}
+
+/* ──────────────────────────────────────────────
+   Resume
+   ────────────────────────────────────────────── */
+.resume-viewer {
+  margin-bottom: 2rem;
+}
+
+.resume-iframe {
+  width: 100%;
+  aspect-ratio: 8.5 / 11;
+  border: none;
+  display: block;
+  overflow: hidden;
+}
+
+.resume-download {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+
+/* ──────────────────────────────────────────────
+   Responsive — Mobile (≤ 640px)
+   ────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .hero-content {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .hero-bio {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .resume-iframe {
+    height: 80vh;
+  }
+}
