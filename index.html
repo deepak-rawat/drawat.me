@@ -1,49 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Deepak Rawat</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-
-  <main class="container">
-
-    <div class="hero-content">
-      <p class="hero-greeting">Hello, I'm</p>
-      <h1 class="hero-name">Deepak Rawat</h1>
-      <p class="hero-bio">
-        Software Engineer focused on systems and platform software development.
-        Passionate about Linux systems programming, device drivers, operating
-        systems, graphics, and Free and Open Source Software. Expert in C and
-        C++ with experience spanning the Linux software stack—from low-level
-        hardware interfaces to graphics and GUI systems.
-      </p>
+  <main class="terminal" aria-label="Terminal">
+    <div class="terminal-header">
+      <div class="header-title">
+        <span class="header-icon" aria-hidden="true">&#x2BC8;_</span>
+        <span class="terminal-title">deepak@drawat: ~</span>
+      </div>
+      <div class="header-buttons" aria-hidden="true">
+        <span class="hbtn" title="minimize">&#x2014;</span>
+        <span class="hbtn" title="maximize">&#x25A2;</span>
+        <span class="hbtn hbtn-close" title="close">&#x2715;</span>
+      </div>
     </div>
 
-    <div class="resume-viewer">
-      <iframe
-        src="resume/Deepak_Rawat_Resume.pdf#navpanes=0&scrollbar=0&view=Fit"
-        title="Deepak Rawat Resume"
-        class="resume-iframe"
-      >
-        <p>Your browser does not support embedded PDFs.
-          <a href="resume/Deepak_Rawat_Resume.pdf">Download the resume instead</a>.
+    <div class="terminal-body">
+      <div class="line">
+        <span class="prompt">
+          <span class="p-user">deepak@drawat</span><span class="p-colon">:</span><span class="p-path">~</span><span class="p-dollar">$</span>
+        </span>
+        <span class="cmd" id="cmd"></span><span class="cursor" id="cursor">&nbsp;</span>
+      </div>
+
+      <div class="output" id="output" hidden>
+        <dl class="info">
+          <dt>name</dt><dd>Deepak Rawat</dd>
+          <dt>title</dt><dd>Software Engineer</dd>
+          <dt>linkedin</dt>
+          <dd>
+            <a href="https://www.linkedin.com/in/deepakrawatcs" target="_blank" rel="noopener noreferrer">
+              linkedin.com/in/deepakrawatcs
+            </a>
+          </dd>
+          <dt>github</dt>
+          <dd>
+            <a href="https://github.com/deepak-rawat" target="_blank" rel="noopener noreferrer">
+              github.com/deepak-rawat
+            </a>
+          </dd>
+          <dt>resume</dt>
+          <dd>
+            <a href="resume/Deepak_Rawat_Resume.pdf" download="Deepak_Rawat_Resume.pdf">
+              ./Deepak_Rawat_Resume.pdf
+            </a>
+          </dd>
+        </dl>
+
+        <p class="bio">
+          Software Engineer specializing in systems and platform software across
+          Windows, Linux, and embedded targets. Expert in C and C++ with deep
+          experience in operating systems, device drivers, graphics, and
+          real-time media pipelines. Currently building cross-platform
+          components of large-scale communication software, with a long-standing
+          interest in open source and low-level system programming.
         </p>
-      </iframe>
-    </div>
 
-    <div class="resume-download">
-      <a
-        href="resume/Deepak_Rawat_Resume.pdf"
-        download="Deepak_Rawat_Resume.pdf"
-        class="btn btn-primary"
-      >
-        ⬇ Download Resume
-      </a>
+        <div class="line trailing">
+          <span class="prompt">
+            <span class="p-user">deepak@drawat</span><span class="p-colon">:</span><span class="p-path">~</span><span class="p-dollar">$</span>
+          </span>
+          <span class="cursor">&nbsp;</span>
+        </div>
+      </div>
     </div>
-
   </main>
+
+  <script src="js/terminal.js"></script>
 </body>
+
 </html>
