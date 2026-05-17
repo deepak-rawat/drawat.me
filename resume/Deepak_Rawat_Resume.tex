@@ -1,0 +1,95 @@
+\documentclass[11pt]{article}
+
+\usepackage[top=0.5in,bottom=0.5in,left=0.55in,right=0.55in]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{tgheros}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Prevent words from being hyphenated/split across lines.
+% LaTeX will move the whole word to the next line; ragged-right keeps spacing natural.
+\usepackage[none]{hyphenat}
+
+\pagenumbering{gobble}
+
+% Tight bullet lists with filled circle marker
+\setlist[itemize]{leftmargin=1.5em, itemsep=1pt, topsep=2pt, parsep=0pt, label=\textbullet}
+
+% Section: bold, followed by horizontal rule with small gap above the rule
+\titleformat{\section}
+  {\normalsize\bfseries}
+  {}{0em}
+  {}
+  [\vspace{2pt}\hrule height 0.6pt]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+% Helper for job entries: bold left (company, title), bold right (dates, location)
+% Negative vspace tightens the gap before the following itemize.
+\newcommand{\jobentry}[2]{%
+  \noindent\textbf{#1}\hfill\textbf{#2}\par\vspace{-6pt}}
+
+\begin{document}
+\raggedright
+
+\begin{center}
+    {\LARGE \textbf{Deepak Singh Rawat}} \\[2pt]
+    3033 229th PL NE, Sammamish, WA 98074 $|$ 213-294-9595 $|$
+    \href{mailto:deepakrawat2287@gmail.com}{deepakrawat2287@gmail.com} \\
+    \href{https://www.linkedin.com/in/deepakrawatcs}{linkedin.com/in/deepakrawatcs} $|$
+    \href{https://github.com/deepak-rawat}{github.com/deepak-rawat}
+\end{center}
+
+\section*{Summary}
+Software Engineer specializing in systems and platform software across Windows, Linux, and embedded targets. Expert in C and C++ with deep experience in operating systems, device drivers, graphics, and real-time media pipelines. Currently building cross-platform components of large-scale communication software, with a long-standing interest in open source and low-level system programming.
+
+\section*{Experience}
+
+\jobentry{Microsoft, Senior Software Engineer}{Sep 2019 -- Present, Redmond, WA}
+\begin{itemize}
+    \item Delivered 4K screen sharing across the video pipeline (capture, encode, transport, render).
+    \item Shipped a GPU-accelerated frame resizer and color converter via the Media Foundation Transform (MFT) API, reducing CPU usage and power consumption.
+    \item Drove sender/receiver screen-sharing reliability to 99.9\% through telemetry-driven root-cause analysis and targeted fixes.
+    \item Designed an API for device categorization by hardware decode capability, enabling smarter codec and resolution decisions.
+    \item Developed and previously maintained the Hyper-V DRM driver for the Linux kernel.
+    \item Built and maintained an internal Yocto-based Linux distro for embedded hardware; contributed upstream to several open source projects.
+\end{itemize}
+
+\jobentry{VMware Inc, Member of Technical Staff}{Feb 2017 -- Sep 2019, Palo Alto, CA}
+\begin{itemize}
+    \item Contributed to the Linux graphics stack for VMware's virtual GPU across the kernel DRM subsystem and the Mesa 3D driver.
+    \item Added Shader Model 4.1 command support and conformance tests to the virtual GPU kernel-mode driver.
+    \item Authored and upstreamed the ``plane update with damage'' feature in the Linux DRM subsystem, reducing redundant display updates and improving compositor efficiency.
+\end{itemize}
+
+\jobentry{Samsung Research America, Software Engineer}{May 2015 -- Feb 2017, Mountain View, CA}
+\begin{itemize}
+    \item Contributed to GearVRf, an open source Android VR rendering library. Joined as an intern from May to Aug 2015 and returned full-time in May 2016.
+    \item Plugin development for the 3D rendering library.
+\end{itemize}
+
+\jobentry{MediaTek Inc, Senior Software Engineer}{Nov 2011 -- Jul 2014, New Delhi, India}
+\begin{itemize}
+    \item Developed multimedia apps such as the video player, sound recorder, and music player with playlists on MediaTek's feature phone platform; worked across middleware and application layers in a resource constrained embedded environment.
+\end{itemize}
+
+\jobentry{Infosys Ltd, Systems Engineer}{Dec 2009 -- Nov 2011, Bangalore, India}
+\begin{itemize}
+    \item Web based application development using Java technologies.
+\end{itemize}
+
+\section*{Technical Skills}
+C, C++, Python, Bash Scripting, Linux, Driver Development, 3D Graphics, Embedded System, GDB, Git, Object Oriented Design, Data Structures, Android
+
+\section*{Education}
+
+\noindent\textbf{University of Southern California, Los Angeles, CA} \hfill 2014 -- 2016 \\
+Master of Science, Computer Science
+
+\vspace{4pt}
+
+\noindent\textbf{Govind Ballabh Pant Institute of Engineering \& Technology, Uttarakhand} \hfill 2005 -- 2009 \\
+Bachelor in Engineering, Computer Science and Engineering
+
+\end{document}
